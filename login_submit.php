@@ -12,14 +12,14 @@ session_start();
 
 <?php
 	
-	$dbConnectLink= mysqli_connect("localhost","shammi","1J2c3e4e","healthy_bite");
+	$dbConnectLink= mysqli_connect("localhost","shammi","shammi","healthy_bite");
 		if($dbConnectLink->connect_error) {
-			echo 'connection failed';
+			
 			die ("connection failed: ". $dbConnectLink->connect_error);
 		}
 		$userName= $_POST["userName"];
 		$password= $_POST["password"];
-		$button= $_POST["submit"];
+		
 		
 		
 		$sql ="select email,password,first_name,age from users where email = '$userName' and password = '$password'";
@@ -31,6 +31,7 @@ session_start();
     				
 					$_SESSION["userName"] =$userName ;
 					echo "welcome user";
+					echo "<a href='logout.php?p=index.php'>logout</a>";
 					echo "<br/><br />";
 					$_SESSION["first_name"] =$row[2] ;
 					$_SESSION["age"] =$row[3] ;

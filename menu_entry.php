@@ -31,32 +31,49 @@
 	  <?php
 	  }
 	   ?>
-	  <form id="form2" name="form2" method="post" action="">
-	    
-	    </form>
+	  
 	  </div>
 		<form id="form1" name="form1" method="post" action="menu_submit.php" class="form-group" onsubmit="return validateForm()">
 			<div class="row">
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<label>ITEM NAME :
-					 	<input type="text" name="item" class="form-control" />
+					 	<input type="text" name="itemName[]" class="form-control" />
 					</label>
 				</div>
-			</div>
-			<div class="row">
-			 	<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+				
+				
 					<label>MEAL TYPE :
-						<input type="text" name="mealType" class="form-control" />
+						<input type="text" name="mealType[]" class="form-control" />
 					</label>
 				</div>
-			</div>
-			<div class="row">
-			 	<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="col-md-3 col-sm-6 col-xs-12">
 					<label>PRICE :
-						<input type="text" name="price" class="form-control" />
+						<input type="text" name="price[]" class="form-control" />
 	  				</label>
 	  			</div>
-	  		</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<label>
+					 	<input type="text" name="itemName[]" class="form-control" />
+					</label>
+					
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+				
+				
+					<label>
+						<input type="text" name="mealType[]" class="form-control" />
+					</label>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<label>
+						<input type="text" name="price[]" class="form-control" />
+	  				</label>
+	  			</div>
+			</div>
+			
 			<div class="row">
 				<div class="col-md-3 col-sm-6 col-xs-12">
 					<label>

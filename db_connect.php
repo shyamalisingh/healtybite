@@ -1,6 +1,6 @@
 
 <?php
-$dbConnectLink=mysqli_connect("localhost","shammi","1J2c3e4e","healthy_bite");
+$dbConnectLink=mysqli_connect("localhost","shammi","shammi","healthy_bite");
 	
 		if ($dbConnectLink->connect_error) {
 			echo 'connection failed';

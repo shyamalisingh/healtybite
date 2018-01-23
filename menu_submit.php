@@ -6,26 +6,13 @@
 </head>
 <body>
 	<?php
-	
-	$dbConnectLink= mysqli_connect("localhost","root","","healthy_bite");
-		if($dbConnectLink->connect_error) {
-			echo 'connetction failed';
-			die ("connection failed: ". $dbConnectLink->connect_error);
+		include "menu_class.php";
+		for($i=0;$i<count($_POST["itemName"]);$i++)
+		{
+			$menu_item =new MenuItem($_POST["itemName"][$i],$_POST["mealType"][$i],$_POST["price"][$i]);
+			$menu_item->placeOrder();	
 		}
-		$item= $_POST["item"];
-		$mealType= $_POST["mealType"];
-		$price= $_POST["price"];
 		
-		
-		$sql ="INSERT INTO menu (item ,meal_type, price)
-		VALUES ('$item', '$mealType', '$price')";
-		
-		if($dbConnectLink->query($sql)=== TRUE) {
-			echo "new record created successfully";
-			} else {
-			echo "error" . $sql . "<br>" . $dbConnectLink->error;
-			}
-		$dbConnectLink->close();
 	?>
 		
 </body>
